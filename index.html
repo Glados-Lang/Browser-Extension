@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Syntax Highlighting</title>
+    <!-- Link to Prism CSS -->
+    <link rel="stylesheet" href="prism.css">
+</head>
+<body>
+    <h1>Code Block Example</h1>
+    <pre><code class="language-mynewlang">
+# This is a comment
+function greet() {
+    return "Hello, World!";
+}
+    </code></pre>
+
+    <!-- Link to Prism.js -->
+    <script src="prism.js"></script>
+
+    <!-- Add custom language definitions -->
+    <script>
+        Prism.languages.mynewlang = {
+            'comment': /#.*/, // Comments
+            'keyword': /\b(if|else|return|function)\b/, // Keywords
+            'string': /(["'])(?:(?=(\\?))\2.)*?\1/, // Strings
+            'number': /\b\d+\b/, // Numbers
+        };
+    </script>
+</body>
+</html>
